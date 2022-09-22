@@ -9,7 +9,7 @@ public class Sort_Counting {
 
     BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
     int N = Integer.parseInt(in.readLine());
-    int[] cnt = new int[10000002];
+    int[] cnt = new int[10000001];
 
     for (int i = 0; i < N; i++) {
     cnt[Integer.parseInt(in.readLine())]++;
@@ -19,7 +19,7 @@ public class Sort_Counting {
 
     BufferedWriter out = new BufferedWriter(new OutputStreamWriter(System.out));
 
-    for (int i = 0; i <= N; i++) {
+    for (int i = 0; i <= 10001; i++) {
       while (cnt[i] > 0) {
         out.write(String.valueOf(i));
         out.write('\n');
