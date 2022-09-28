@@ -16,15 +16,19 @@ public class AgeSort {
 
     for (int i = 0; i < N; i++) {
       StringTokenizer st = new StringTokenizer(in.readLine());
+      humans[i] = new Person();
       humans[i].age = Integer.parseInt(st.nextToken());
       humans[i].name = st.nextToken();
+      humans[i].no = i;
     }
+
+    in.close();
 
     Arrays.sort(humans, new Comparator<Person>() {
       @Override
       public int compare(Person o1, Person o2) {
         if (o1.age == o2.age) {
-          return o1.name.compareTo(o2.name);
+          return o1.no - o2.no;
         } else {
           return o1.age - o2.age;
         }
@@ -39,9 +43,10 @@ public class AgeSort {
 
   }
 
-  class Person {
+  static class Person {
     int age;
     String name;
+    int no;
   }
 
 }
