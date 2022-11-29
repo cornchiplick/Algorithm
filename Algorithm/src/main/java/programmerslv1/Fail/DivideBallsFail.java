@@ -1,4 +1,4 @@
-package Fail;
+package programmerslv1.Fail;
 
 // 성공했어요.
 class DivideBallsFail {

@@ -1,9 +1,11 @@
+package programmerslv1;
+
 import java.util.ArrayList;
 
-public class Test {
+public class HiddenNumSum {
   public static void main(String[] args) {
 
-    System.out.println(solution("ab3d9"));
+    System.out.println(solution("aAb1B2cC34oOp"));
 
   }
 
@@ -16,8 +18,10 @@ public class Test {
     for (int i = 0; i < my_string.length(); i++) {
       if (Character.isDigit(my_string.charAt(i))) {
         count = i;
+        break;
       }
     }
+
     if (count == -1) {
       return 0;
     }
@@ -25,15 +29,18 @@ public class Test {
     for (int i = count; i < my_string.length(); i++) {
       if (Character.isDigit(my_string.charAt(i))) {
         sb.append(my_string.charAt(i));
-      } else if (i == my_string.length()-1) {
-          if (Character.isDigit(my_string.charAt(i))) {
-            arr.add(Integer.parseInt(sb.toString()));
-            break;
-          }
-      } else {
+        if (i == my_string.length()-1 && (sb.length() != 0)) {
+          arr.add(Integer.parseInt(sb.toString()));
+        }
+
+      } else if (sb.length() != 0) {
         arr.add(Integer.parseInt(sb.toString()));
         sb.setLength(0);
       }
+    }
+
+    for (int i = 0; i < arr.size(); i++) {
+      answer += (int) arr.get(i);
     }
 
 

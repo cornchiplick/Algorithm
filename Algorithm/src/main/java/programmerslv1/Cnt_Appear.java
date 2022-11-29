@@ -1,3 +1,5 @@
+package programmerslv1;
+
 public class Cnt_Appear {
 
   public static void main(String[] args) {
