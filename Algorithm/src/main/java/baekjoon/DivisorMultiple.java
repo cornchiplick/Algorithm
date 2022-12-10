@@ -15,7 +15,7 @@ public class DivisorMultiple {
     int max = -1;
     // 최대공약수가 커봤자 주어진 두 수보다 크지는 않다.
     for (int i = 1; i <= Math.min(a, b); i++) {
-      if (max < i && a % i == 0 && b % i == 0) {
+      if (a % i == 0 && b % i == 0) {
         max = i;
       }
     }
