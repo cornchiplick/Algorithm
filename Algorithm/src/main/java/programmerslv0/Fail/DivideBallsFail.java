@@ -17,6 +17,10 @@ class DivideBallsFail {
     long share2 = share;
     long i = balls2;
     long j = 1;
+
+    // programmers : n! / (n-k)!k!
+    // i * (i+1) * (i+2) * ...  mod k == 0
+    // 6 / 1! 1!
     if (balls2-share2 > share2) {
       while (j <= share2) {
         answer *= i;
@@ -25,6 +29,8 @@ class DivideBallsFail {
         j++;
       }
       return (int) answer;
+
+
     } else {
       while (j <= balls2-share2) {
         answer *= i;
