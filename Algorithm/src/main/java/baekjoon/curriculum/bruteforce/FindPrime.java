@@ -1,6 +1,11 @@
 package baekjoon.curriculum.bruteforce;
 
-public class FindPrime_Fail {
+import java.util.HashSet;
+import java.util.Iterator;
+
+public class FindPrime {
+  public static HashSet<Integer> hashSet = new HashSet<>();
+
   public static void main(String[] args) {
     String numbers = "17";
     int result = 3;
@@ -13,18 +18,17 @@ public class FindPrime_Fail {
     // 주어진 숫자 하나씩 분리
     Integer[] nums = spliceNumbers(numbers);
 
-    Integer[] numberArr;
-    for (int i = 1; i < nums.length; i++) {
-      // i자리 수로 가능한 모든 수 조합
-      numberArr = findNumberArr(nums, i);
+    // hashSet에 가능한 모든 수를 저장
+    findNumberArr(0, nums);
 
-      // 조합한 수가 소수인지 확인
-      for (int number : numberArr) {
-        if (isPrime(number)) {
-          count++;
-        }
+    // hashSet에 저장된 수가 소수인지 확인
+    Iterator<Integer> it = hashSet.iterator();
+    while (it.hasNext()) {
+      int number = it.next();
+
+      if (isPrime(number)) {
+        count++;
       }
-
     }
 
     return count;
@@ -40,11 +44,24 @@ public class FindPrime_Fail {
     return nums;
   }
 
-  private static Integer[] findNumberArr(Integer[] nums, int i) {
+  private static void findNumberArr(Integer comb, Integer[] others) {
+    if (comb != 0) {
+      hashSet.add(comb);
+    }
 
+    for (int i = 0; i < others.length; i++) {
+      if (comb != 0) {
+        hashSet.add(comb);
+      }
 
+      int temp = others[i];
+      if (temp != -1) {
+        others[i] = -1;
+        findNumberArr(comb * 10 + temp, others);
+        others[i] = temp;
+      }
+    }
 
-    return new Integer[0];
   }
 
   private static boolean isPrime(int number) {
