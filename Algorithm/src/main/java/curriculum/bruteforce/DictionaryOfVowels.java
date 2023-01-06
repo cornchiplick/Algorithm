@@ -1,4 +1,4 @@
-package baekjoon.curriculum.bruteforce;
+package curriculum.bruteforce;
 
 public class DictionaryOfVowels {
   public static int result = 0;

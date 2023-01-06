@@ -1,4 +1,4 @@
-package baekjoon.curriculum.bruteforce;
+package curriculum.bruteforce;
 
 public class Pyrodo {
   // dfs를 위한 전역변수 설정

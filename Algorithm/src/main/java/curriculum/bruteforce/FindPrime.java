@@ -1,4 +1,4 @@
-package baekjoon.curriculum.bruteforce;
+package curriculum.bruteforce;
 
 import java.util.HashSet;
 import java.util.Iterator;

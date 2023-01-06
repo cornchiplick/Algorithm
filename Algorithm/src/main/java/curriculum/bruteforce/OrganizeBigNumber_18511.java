@@ -1,4 +1,4 @@
-package baekjoon.curriculum.bruteforce;
+package curriculum.bruteforce;
 
 import java.io.BufferedReader;
 import java.io.IOException;

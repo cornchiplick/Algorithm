@@ -1,4 +1,4 @@
-package baekjoon.curriculum.bruteforce;
+package curriculum.bruteforce;
 
 import java.util.Arrays;
 import java.util.Scanner;

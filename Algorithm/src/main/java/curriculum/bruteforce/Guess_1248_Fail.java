@@ -1,10 +1,10 @@
-package baekjoon.curriculum.bruteforce;
+package curriculum.bruteforce;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Guess_1248 {
+public class Guess_1248_Fail {
   public static int[] arr;
 
   public static void main(String[] args) throws IOException {
@@ -47,7 +47,7 @@ public class Guess_1248 {
       // matrix의 결과표와 대조
       if (inspect(matrix, inspected)) {
         // 맞으면 해당 array를 return
-        Guess_1248.arr = inspected;
+        Guess_1248_Fail.arr = inspected;
         return;
 
       } else {
