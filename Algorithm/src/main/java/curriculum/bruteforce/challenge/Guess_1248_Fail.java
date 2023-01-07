@@ -1,4 +1,4 @@
-package curriculum.bruteforce;
+package curriculum.bruteforce.challenge;
 
 import java.io.BufferedReader;
 import java.io.IOException;
