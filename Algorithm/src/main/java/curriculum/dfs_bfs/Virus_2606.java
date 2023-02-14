@@ -44,6 +44,7 @@ public class Virus_2606 {
       arr[nodeA][nodeB] = true;
       arr[nodeB][nodeA] = true;
     }
+    br.close();
 
     // bfs 탐색
     int count = bfs(1);
