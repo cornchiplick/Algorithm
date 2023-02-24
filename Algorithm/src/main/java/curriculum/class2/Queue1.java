@@ -1,4 +1,4 @@
-package baekjoon.class2;
+package curriculum.class2;
 
 import java.io.BufferedReader;
 import java.io.IOException;

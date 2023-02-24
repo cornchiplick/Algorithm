@@ -1,4 +1,4 @@
-package baekjoon.class2;
+package curriculum.class2;
 
 import java.util.LinkedList;
 import java.util.Queue;

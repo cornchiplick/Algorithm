@@ -1,4 +1,4 @@
-package baekjoon.recurrence;
+package baekjoon.recurrence_12;
 
 import java.io.BufferedReader;
 import java.io.IOException;
