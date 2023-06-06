@@ -1,3 +1,3 @@
 function solution(rny_string) {
-    return rny_string.split('m').join('rn');
+    return rny_string.replaceAll('m', 'rn')
 }
